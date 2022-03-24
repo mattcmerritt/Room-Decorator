@@ -31,6 +31,8 @@ public class Furniture : MonoBehaviour
         MovementUI.transform.eulerAngles = new Vector3(90f, 0f, 0f);
         // moving the canvas down to the floor but not close enough to have z-fighting
         MovementUI.transform.localPosition += Vector3.down * 0.49f;
+
+        BeingPainted = true;
     }
 
     public void ChangeColor(Color color)
@@ -75,5 +77,10 @@ public class Furniture : MonoBehaviour
             SelectFurniture();
             GameManager.SelectFurniture(gameObject);
         }
+    }
+
+    public void ToggleBeingPainted()
+    {
+        BeingPainted = !BeingPainted;
     }
 }

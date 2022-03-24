@@ -82,5 +82,8 @@ public class PaintingArea : MonoBehaviour
 
         // move to room
         ActiveObject.transform.position = Vector3.up * ActiveObject.transform.localScale.y / 2;
+
+        // activate placement click detection
+        ActiveObject.GetComponent<Furniture>().ToggleBeingPainted();
     }
 }
