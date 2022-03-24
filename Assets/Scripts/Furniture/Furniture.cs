@@ -16,6 +16,9 @@ public class Furniture : MonoBehaviour
     [SerializeField]
     private GameObject MovementUIPrefab;
 
+    // Painting information
+    private bool BeingPainted;
+
     private void Start()
     {
         Size = transform.localScale;
@@ -67,7 +70,10 @@ public class Furniture : MonoBehaviour
 
     public void OnMouseDown()
     {
-        SelectFurniture();
-        GameManager.SelectFurniture(gameObject);
+        if (!BeingPainted)
+        {
+            SelectFurniture();
+            GameManager.SelectFurniture(gameObject);
+        }
     }
 }
