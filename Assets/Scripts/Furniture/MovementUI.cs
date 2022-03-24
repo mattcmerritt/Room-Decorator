@@ -32,6 +32,9 @@ public class MovementUI : MonoBehaviour
                 }
             }
         }
+
+        // hiding inactive canvases
+        HideUI();
     }
 
     public void HideUI()
