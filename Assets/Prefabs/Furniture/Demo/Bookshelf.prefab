@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7588368944501512216}
   - component: {fileID: 2960732266491969548}
   - component: {fileID: 6882936864030496854}
-  m_Layer: 0
+  - component: {fileID: 212949494388809098}
+  m_Layer: 7
   m_Name: Bookshelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,4 +110,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StepValue: 0.5
-  MovementUIPrefab: {fileID: 5105433031258508984, guid: bb0e0009dc736ad4883efbe6379ff957, type: 3}
+--- !u!114 &212949494388809098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592072720843469518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ca6b0279f96e443b8de5166bfdc10d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0
+  RaycastMask:
+    serializedVersion: 2
+    m_Bits: 64

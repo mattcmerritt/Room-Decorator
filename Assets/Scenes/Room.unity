@@ -232,6 +232,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 191792263722757127, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698751367552605728, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800873355811578333, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232179474640860770, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178050106670967828, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477554613289094701, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7718778357557926605, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
       propertyPath: m_Name
       value: Room

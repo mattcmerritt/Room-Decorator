@@ -41,11 +41,15 @@ public class UIManager : MonoBehaviour
     {
         MainCamera.SetActive(false);
         PaintingArea.SetActive(true);
+
+        GameManager.SetIsPainting(true);
     }
 
     public void SwitchToRoom()
     {
         MainCamera.SetActive(true);
         PaintingArea.SetActive(false);
+
+        GameManager.SetIsPainting(false);
     }
 }

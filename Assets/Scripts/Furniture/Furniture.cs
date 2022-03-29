@@ -11,10 +11,12 @@ public class Furniture : MonoBehaviour
     [SerializeField, Range(0, 5)]
     private float StepValue;
 
-    // Child objects
+    /*
+    // Child objects - Outdated
     private GameObject MovementUI;
     [SerializeField]
     private GameObject MovementUIPrefab;
+    */
 
     // Painting information
     private bool BeingPainted;
@@ -23,6 +25,8 @@ public class Furniture : MonoBehaviour
     {
         Size = transform.localScale;
 
+        /*
+        // OUTDATED MOVEMENT UI
         // creating a movement ui for this furniture item
         MovementUI = Instantiate(MovementUIPrefab, Vector3.zero, Quaternion.identity);
         // setting as a child of the furniture item
@@ -31,6 +35,7 @@ public class Furniture : MonoBehaviour
         MovementUI.transform.eulerAngles = new Vector3(90f, 0f, 0f);
         // moving the canvas down to the floor but not close enough to have z-fighting
         MovementUI.transform.localPosition += Vector3.down * 0.49f;
+        */
 
         BeingPainted = true;
     }
@@ -40,6 +45,8 @@ public class Furniture : MonoBehaviour
         PaintColor = color;
     }
 
+    /*
+    // OLD MOVEMENT CODE
     public void MoveForward()
     {
         transform.position += Vector3.forward * StepValue;
@@ -78,6 +85,7 @@ public class Furniture : MonoBehaviour
             GameManager.SelectFurniture(gameObject);
         }
     }
+    */
 
     public void ToggleBeingPainted()
     {
