@@ -27,6 +27,7 @@ public class PaintingArea : MonoBehaviour
 
         // labeling
         ActiveObject.GetComponent<Furniture>().SetLabel(name);
+        ActiveObject.GetComponent<Furniture>().ChangeColor(Color.white, "white");
     }
 
 
