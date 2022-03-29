@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private static bool IsPainting;
+
+    /*
+    // OUTDATED AS OF DRAGGABLE OBJECT
     private static GameObject CurrentFurniture;
     private static GameObject PreviousFurniture;
 
@@ -29,5 +33,16 @@ public class GameManager : MonoBehaviour
     public static GameObject GetSelected()
     {
         return CurrentFurniture;
+    }
+    */
+
+    public static bool CheckIsPainting()
+    {
+        return IsPainting;
+    }
+
+    public static void SetIsPainting(bool val)
+    {
+        IsPainting = val;
     }
 }

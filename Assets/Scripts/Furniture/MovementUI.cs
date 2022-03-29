@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class MovementUI : MonoBehaviour
 {
+    /*
+    // OUTDATED, SEE DRAGGABLE ITEM
     private void Start()
     {
         // world space canvases need to be set up with the camera
@@ -41,4 +43,5 @@ public class MovementUI : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+    */
 }
