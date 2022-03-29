@@ -6,7 +6,12 @@ public class Furniture : MonoBehaviour
 {
     // Furniture Properties
     private Vector3 Size;
+    [SerializeField]
     private Color PaintColor;
+    [SerializeField]
+    private string ColorName;
+    [SerializeField]
+    private string Label;
 
     [SerializeField, Range(0, 5)]
     private float StepValue;
@@ -40,9 +45,30 @@ public class Furniture : MonoBehaviour
         BeingPainted = true;
     }
 
-    public void ChangeColor(Color color)
+    public void ChangeColor(Color color, string colorName)
     {
         PaintColor = color;
+        ColorName = colorName;
+    }
+
+    public void SetLabel(string label)
+    {
+        Label = label;
+    }
+
+    public Color GetColor()
+    {
+        return PaintColor;
+    }
+
+    public string GetColorName()
+    {
+        return ColorName;
+    }
+
+    public string GetLabel()
+    {
+        return Label;
     }
 
     /*
