@@ -25,6 +25,7 @@ public class DemoOfficeGrader : MonoBehaviour
     [SerializeField] private List<Furniture> Desks;
     [SerializeField] private List<Furniture> Chairs;
     [SerializeField] private List<Furniture> Bookshelves;
+    [SerializeField] private List<Furniture> Sofas;
     [SerializeField] private bool[] WorkstationCriteria, LibraryCriteria, CountCriteria; // these track the requirements listed in the comments
     [SerializeField] private GameObject GradingPanel;
     [SerializeField] private TMP_Text TextBox;
@@ -47,6 +48,10 @@ public class DemoOfficeGrader : MonoBehaviour
             {
                 Bookshelves.Add(furni);
             }
+            else if (furni.GetLabel() == "Sofa" || furni.GetLabel() == "Loveseat")
+            {
+                Sofas.Add(furni);
+            }
         }
         int timeBonus = CalculateTimeBonus();
         int finalScore = WorkstationCheck() + LibraryCheck() + CountCheck() + timeBonus;
@@ -58,8 +63,8 @@ public class DemoOfficeGrader : MonoBehaviour
             $"(1 pt) Professional color chosen for chair: {WorkstationCriteria[3]} \n" +
             $"(1 pt) Desk and chair colors match: {WorkstationCriteria[4]} \n\n" +
             $"(1 pt) Exciting bookshelf color chosen: {LibraryCriteria[0]} \n" +
-            $"(1 pt) One exciting-colored chair in room: {LibraryCriteria[1]} \n" +
-            $"(1 pt) Multiple exciting-colored chairs in room: {LibraryCriteria[2]} \n\n" +
+            $"(1 pt) One vibrant comfortable seat in room: {LibraryCriteria[1]} \n" +
+            $"(1 pt) Multiple vibrant comfortable seat in room: {LibraryCriteria[2]} \n\n" +
             $"(1 pt) Between 4 to 7 pieces of furniture: {CountCriteria[0]} \n" +
             $"(1 pt) At least 1 table, chair, and bookshelf: {CountCriteria[1]} \n\n" +
             $"(5 pt) Time Bonus: {timeBonus} \n\n" +
@@ -168,23 +173,23 @@ public class DemoOfficeGrader : MonoBehaviour
         }
 
         // look for at most two colorful chairs, and add either zero, one, or two points based on number of chairs
-        int colorfulChairs = 0;
-        foreach (Furniture chair in Chairs)
+        int seats = 0;
+        foreach (Furniture seat in Sofas)
         {
-            if (chair.GetColorName() == "red" || chair.GetColorName() == "yellow" || chair.GetColorName() == "green" || chair.GetColorName() == "blue" || chair.GetColorName() == "purple")
+            if (seat.GetColorName() == "red" || seat.GetColorName() == "yellow" || seat.GetColorName() == "green" || seat.GetColorName() == "blue" || seat.GetColorName() == "purple")
             {
-                colorfulChairs += 1;
-                if (colorfulChairs == 1)
+                seats += 1;
+                if (seats == 1)
                 {
                     LibraryCriteria[1] = true;
                 }
-                else if (colorfulChairs > 1)
+                else if (seats > 1)
                 {
                     LibraryCriteria[2] = true;
                 }
             }
         }
-        score += Mathf.Min(colorfulChairs, 2);
+        score += Mathf.Min(seats, 2);
 
         return score;
     }
