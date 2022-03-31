@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static bool IsPainting;
+    private bool IsPainting;
 
-    /*
-    // OUTDATED AS OF DRAGGABLE OBJECT
-    private static GameObject CurrentFurniture;
-    private static GameObject PreviousFurniture;
+    private GameObject CurrentFurniture;
+    private GameObject PreviousFurniture;
 
-    public static void SelectFurniture(GameObject obj)
+    public void SelectFurniture(GameObject obj)
     {
         if (obj != CurrentFurniture)
         {
@@ -21,28 +19,32 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public static void DeselectPrevious()
+    public void DeselectPrevious()
     {
         if (PreviousFurniture != null)
         {
-            Furniture furniture = PreviousFurniture.GetComponent<Furniture>();
-            furniture.DeselectFurniture();
+            PreviousFurniture.GetComponent<DraggableItem>().DeselectFurniture();
         }
     }
 
-    public static GameObject GetSelected()
+    public GameObject GetSelected()
     {
         return CurrentFurniture;
     }
-    */
 
-    public static bool CheckIsPainting()
+
+    public bool CheckIsPainting()
     {
         return IsPainting;
     }
 
-    public static void SetIsPainting(bool val)
+    public void SetIsPainting(bool val)
     {
         IsPainting = val;
+    }
+
+    public void RotateItemWithSlider(float newRotation)
+    {
+        CurrentFurniture.transform.eulerAngles = new Vector3(0, newRotation, 0);
     }
 }

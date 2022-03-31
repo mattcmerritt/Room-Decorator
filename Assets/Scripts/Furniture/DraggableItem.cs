@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class DraggableItem : MonoBehaviour
 {
@@ -10,6 +11,14 @@ public class DraggableItem : MonoBehaviour
     private Vector3 MouseOffset;
     [SerializeField]
     private LayerMask RaycastMask;
+    [SerializeField]
+    private GameManager GameManager;
+
+    private void Start()
+    {
+        Debug.Log("hello");
+        GameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+    }
 
     private void FixedUpdate()
     {
@@ -37,6 +46,10 @@ public class DraggableItem : MonoBehaviour
         if (!GameManager.CheckIsPainting())
         {
             IsSelected = true;
+            GameManager.SelectFurniture(gameObject);
+
+            // update rotation slider value
+            GameObject.FindGameObjectWithTag("RotationSlider").GetComponent<Slider>().value = transform.eulerAngles.y%360;
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, RaycastMask);
@@ -53,5 +66,10 @@ public class DraggableItem : MonoBehaviour
 
             MouseOffset = Vector3.zero;
         }
+    }
+
+    public void DeselectFurniture()
+    {
+        IsSelected = false;
     }
 }

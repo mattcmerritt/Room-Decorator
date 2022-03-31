@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject PaintingArea, MainCamera;
 
+    [SerializeField]
+    private GameManager GameManager;
+
     public void ShowCatalog()
     {
         Catalog.SetActive(true);
