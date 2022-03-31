@@ -364,7 +364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6892527981407216492
 RectTransform:
   m_ObjectHideFlags: 0
@@ -924,6 +924,7 @@ MonoBehaviour:
   CountCriteria: 
   GradingPanel: {fileID: 6892527981702660403}
   TextBox: {fileID: 6892527981226895723}
+  GameTimer: {fileID: 0}
 --- !u!1 &8665611781856806729
 GameObject:
   m_ObjectHideFlags: 0
