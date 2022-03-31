@@ -834,250 +834,65 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 260317884, guid: 1077629671687554a88e55628002f4ee, type: 3}
+    - target: {fileID: 3443166894312862615, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 260317884, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 260317884, guid: 1077629671687554a88e55628002f4ee, type: 3}
+    - target: {fileID: 3443166894312862615, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 260317884, guid: 1077629671687554a88e55628002f4ee, type: 3}
+    - target: {fileID: 3921828319125442213, guid: 1077629671687554a88e55628002f4ee, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921828319125442213, guid: 1077629671687554a88e55628002f4ee, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921828319125442213, guid: 1077629671687554a88e55628002f4ee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921828319125442213, guid: 1077629671687554a88e55628002f4ee, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921828319125442213, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 280431839, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 280431839, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 280431839, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 485261845, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 485261845, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011687, guid: 1077629671687554a88e55628002f4ee, type: 3}
+    - target: {fileID: 3921828319125442213, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000019073486
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1370011687, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.00015599604
+    - target: {fileID: 4324651495975724662, guid: 1077629671687554a88e55628002f4ee, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: ButtonPrefab
-      value: 
-      objectReference: {fileID: 1746823030734020233, guid: b0ad65540fea8084d95a296b4d887795, type: 3}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Messages.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Responses.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Messages.Array.data[0]
-      value: What's the general plan for the room?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Messages.Array.data[1]
-      value: What sort of furniture are you looking for?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Messages.Array.data[2]
-      value: Is there a color scheme you want for the room?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Messages.Array.data[3]
-      value: What do you want the library to look like?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Messages.Array.data[4]
-      value: What do you want the work station to look like?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Messages.Array.data[5]
-      value: What do you want the room layout to be like?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Messages.Array.data[6]
-      value: What do you intend on doing in the room?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Messages.Array.data[7]
-      value: Is there anything in particular you want me to avoid doing?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Responses.Array.data[0]
-      value: I'd like the room to have a work desk and a personal library that I
-        can use.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Responses.Array.data[1]
-      value: Just a desk and chair for the work station, and a bookshelf with some
-        seats for the library. Nothing too fancy.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Responses.Array.data[2]
-      value: For the work station, pick some bland, professional colors, like brown
-        or black or something. As for the library - surprise me and pick something
-        more vibrant, like a nice red or yellow.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Responses.Array.data[3]
-      value: Well, besides the obvious bookshelf, some seating for me and a family
-        member would be nice.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Responses.Array.data[4]
-      value: I just need a desk and a chair so I can work from home and attend video
-        conferences.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Responses.Array.data[5]
-      value: Please put the library and work station far apart - I don't want to
-        get distracted!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Responses.Array.data[6]
-      value: I mostly intend on using the room for video conferences, but maybe I
-        would have a friend or family member in there every once in a while.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: Responses.Array.data[7]
-      value: Don't put too much stuff in the room! It's just a simple office - I
-        don't want to pay too much for furniture here!
-      objectReference: {fileID: 0}
-    - target: {fileID: 2041786297, guid: 1077629671687554a88e55628002f4ee, type: 3}
+    - target: {fileID: 4324651495975724662, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2041786297, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2041786297, guid: 1077629671687554a88e55628002f4ee, type: 3}
+    - target: {fileID: 4324651495975724662, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2085789488, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2085789488, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284188385904325639, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284188385904325639, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284188385904325639, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284188385904325639, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3443166894312862615, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3443166894312862615, guid: 1077629671687554a88e55628002f4ee, type: 3}
+    - target: {fileID: 4324651495975724662, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 335
       objectReference: {fileID: 0}
-    - target: {fileID: 3868083714989338177, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3868083714989338177, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3868083714989338177, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3868083714989338177, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3868083715817614346, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3868083715817614346, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3868083715817614346, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3868083715817614346, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3868083716778772225, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3868083716778772225, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3868083716778772225, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3868083716778772225, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3921828319125442213, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3921828319125442213, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3921828319125442213, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3921828319125442213, guid: 1077629671687554a88e55628002f4ee, type: 3}
+    - target: {fileID: 4324651495975724662, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 4324651495975724662, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -335.00003
       objectReference: {fileID: 0}
     - target: {fileID: 4324651495975724662, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000076293945
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5646393729616820268, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_Pivot.x
@@ -1163,26 +978,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6826086799725885524, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: IsPlayer.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6826086799725885524, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: IsPlayer.Array.data[0]
+    - target: {fileID: 6052419004149486671, guid: 1077629671687554a88e55628002f4ee, type: 3}
+      propertyPath: m_Size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6826086799725885524, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: IsPlayer.Array.data[1]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6826086799725885524, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: PreloadedMessages.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6826086799725885524, guid: 1077629671687554a88e55628002f4ee, type: 3}
-      propertyPath: PreloadedMessages.Array.data[1]
-      value: Hey, thanks for helping me design my home office! If you have any questions
-        about the plan, ask away. I have to drive to work though, so make it quick!
+    - target: {fileID: 7415733119213819238, guid: 1077629671687554a88e55628002f4ee, type: 3}
+      propertyPath: m_Size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8004177958520351618, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_Name
@@ -1194,6 +996,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8099012446860750455, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099012446860750455, guid: 1077629671687554a88e55628002f4ee, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8215268265261860622, guid: 1077629671687554a88e55628002f4ee, type: 3}
@@ -1315,6 +1121,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc95fa521753f3f47bc5252663ef55c5, type: 3}
+--- !u!1 &6826086799725885523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8298135375284310471, guid: 1077629671687554a88e55628002f4ee, type: 3}
+  m_PrefabInstance: {fileID: 3284188385719642516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6826086799725885524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826086799725885523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd15b27e1b2bc344887d04595002ad81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreloadedMessages:
+  - Hello!
+  - This will be a very long message that will need to wrap around onto multiple
+    lines to test if everything is working properly.
+  - This will be a very long message that will need to wrap around onto multiple
+    lines to test if everything is working properly.
+  IsPlayer: 010101
+  PlayerBubble: {fileID: 8394536828490898654, guid: 10caedf2be2fa60438837acf573a8b6a, type: 3}
+  ClientBubble: {fileID: 0}
 --- !u!1001 &6892527980339040205
 PrefabInstance:
   m_ObjectHideFlags: 0
