@@ -27,7 +27,7 @@ public class DraggableItem : MonoBehaviour
                 //    hit.point.z - (Mathf.Sin(75 * Mathf.Deg2Rad) * transform.localScale.y / Mathf.Sin(30 * Mathf.Deg2Rad))
                 //);
                 transform.position = hit.point;
-                transform.position += Vector3.up * transform.localScale.y / 2;
+                transform.position += Vector3.up * GetComponent<Furniture>().GetYDisplacement();
             }
         }
     }

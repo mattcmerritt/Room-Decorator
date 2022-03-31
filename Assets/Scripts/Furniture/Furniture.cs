@@ -5,7 +5,10 @@ using UnityEngine;
 public class Furniture : MonoBehaviour
 {
     // Furniture Properties
-    private Vector3 Size;
+    [SerializeField]
+    private float YDisplacement;
+    [SerializeField]
+    private float YRotation;
     [SerializeField]
     private Color PaintColor;
     [SerializeField]
@@ -28,8 +31,6 @@ public class Furniture : MonoBehaviour
 
     private void Start()
     {
-        Size = transform.localScale;
-
         /*
         // OUTDATED MOVEMENT UI
         // creating a movement ui for this furniture item
@@ -69,6 +70,16 @@ public class Furniture : MonoBehaviour
     public string GetLabel()
     {
         return Label;
+    }
+
+    public float GetYDisplacement()
+    {
+        return YDisplacement;
+    }
+
+    public float GetYRotation()
+    {
+        return YRotation;
     }
 
     /*
