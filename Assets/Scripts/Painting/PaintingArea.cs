@@ -20,6 +20,8 @@ public class PaintingArea : MonoBehaviour
         int index = Names.IndexOf(name);
         // creating item
         ActiveObject = Instantiate(FurniturePrefabs[index], Vector3.zero, Quaternion.identity);
+        // rotate item toward camera
+        ActiveObject.transform.eulerAngles = new Vector3(0, ActiveObject.GetComponent<Furniture>().GetYRotation(), 0);
         // setting as child
         ActiveObject.transform.SetParent(transform);
         // centering
@@ -94,7 +96,7 @@ public class PaintingArea : MonoBehaviour
         ActiveObject.transform.SetParent(null);
 
         // move to room
-        ActiveObject.transform.position = Vector3.up * ActiveObject.transform.localScale.y / 2;
+        ActiveObject.transform.position = Vector3.up * ActiveObject.GetComponent<Furniture>().GetYDisplacement();
 
         // activate placement click detection
         ActiveObject.GetComponent<Furniture>().ToggleBeingPainted();
