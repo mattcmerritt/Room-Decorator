@@ -1266,7 +1266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4324651495975724662, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 11.001279
+      value: 11.00002
       objectReference: {fileID: 0}
     - target: {fileID: 4499691891993923727, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1429,6 +1429,10 @@ PrefabInstance:
     - target: {fileID: 3983333815938208905, guid: bc95fa521753f3f47bc5252663ef55c5, type: 3}
       propertyPath: m_Name
       value: Timer UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983333815938208905, guid: bc95fa521753f3f47bc5252663ef55c5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3983333815938208909, guid: bc95fa521753f3f47bc5252663ef55c5, type: 3}
       propertyPath: m_Pivot.x
