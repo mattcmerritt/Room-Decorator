@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657892, g: 0.49641305, b: 0.5748153, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657952, g: 0.49641365, b: 0.57481635, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -660,6 +660,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97f127cf28b2b41ecb80824642ebdc1f, type: 3}
+--- !u!95 &1643834653 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1643834653, guid: 46224489e9f2bc944b0400f108fbfb6f, type: 3}
+  m_PrefabInstance: {fileID: 6622152066664451367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1771933108 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4284263365340724778, guid: 071ca654cd60cf74184c2a70fc0e03ad, type: 3}
@@ -706,7 +711,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1790984726 stripped
 MonoBehaviour:
@@ -1413,7 +1418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4324651495975724662, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 11.000011
+      value: -0.000030472735
       objectReference: {fileID: 0}
     - target: {fileID: 4499691891993923727, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1682,6 +1687,10 @@ PrefabInstance:
       propertyPath: Phone
       value: 
       objectReference: {fileID: 1601188863}
+    - target: {fileID: 6622152068188453537, guid: 46224489e9f2bc944b0400f108fbfb6f, type: 3}
+      propertyPath: NotificationWindow
+      value: 
+      objectReference: {fileID: 1643834653}
     - target: {fileID: 6622152068188453538, guid: 46224489e9f2bc944b0400f108fbfb6f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1692,7 +1701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6622152068188453538, guid: 46224489e9f2bc944b0400f108fbfb6f, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6622152068188453538, guid: 46224489e9f2bc944b0400f108fbfb6f, type: 3}
       propertyPath: m_AnchorMax.x
