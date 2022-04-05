@@ -104,6 +104,9 @@ public class PaintingArea : MonoBehaviour
         // activate placement click detection
         ActiveObject.GetComponent<Furniture>().ToggleBeingPainted();
 
+        // select new item
+        GameObject.FindObjectOfType<GameManager>().SelectFurniture(ActiveObject);
+
         // send new hint if applicable
         HintManager.LookForPlacementHint(ActiveObject.GetComponent<Furniture>());
     }
