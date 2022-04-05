@@ -16,7 +16,6 @@ public class DraggableItem : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("hello");
         GameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
@@ -49,7 +48,7 @@ public class DraggableItem : MonoBehaviour
             GameManager.SelectFurniture(gameObject);
 
             // update rotation slider value
-            GameObject.FindGameObjectWithTag("RotationSlider").GetComponent<Slider>().value = transform.eulerAngles.y%360;
+            //GameObject.FindGameObjectWithTag("RotationSlider").GetComponent<Slider>().value = transform.eulerAngles.y%360;
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, RaycastMask);

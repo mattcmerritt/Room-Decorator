@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
         {
             PreviousFurniture = CurrentFurniture;
             CurrentFurniture = obj;
+            GameObject.FindObjectOfType<RotationUI>().ResetSlider();
             DeselectPrevious();
         }
     }
