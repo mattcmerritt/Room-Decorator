@@ -38,7 +38,7 @@ public class DemoOfficeGrader : MonoBehaviour
         FurnitureList = FindObjectsOfType<Furniture>();
         foreach (Furniture furni in FurnitureList)
         {
-            if (furni.GetLabel() == "Table")
+            if (furni.GetLabel() == "Table" || furni.GetLabel() == "Desk")
             {
                 Desks.Add(furni);
             }
