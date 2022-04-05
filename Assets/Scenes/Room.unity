@@ -1065,11 +1065,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1370011687, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000019073486
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 1370011687, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00015599604
+      value: -0.000002861023
       objectReference: {fileID: 0}
     - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: ButtonPrefab
@@ -1310,7 +1310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4324651495975724662, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 18.252365
+      value: 11.000024
       objectReference: {fileID: 0}
     - target: {fileID: 4499691891993923727, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1579,58 +1579,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1479669251}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.125
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733697276646806609, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892527981173749459, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892527981173749459, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892527981173749459, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892527981173749459, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6892527981407216464, guid: b572b226565c3154c9734f0d871e5249, type: 3}
       propertyPath: m_Name
       value: Grading UI
@@ -1964,6 +1912,10 @@ PrefabInstance:
     - target: {fileID: 4284263365340724778, guid: 071ca654cd60cf74184c2a70fc0e03ad, type: 3}
       propertyPath: m_Name
       value: Gameplay UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284263365340724778, guid: 071ca654cd60cf74184c2a70fc0e03ad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 071ca654cd60cf74184c2a70fc0e03ad, type: 3}

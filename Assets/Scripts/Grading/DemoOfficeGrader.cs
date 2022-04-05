@@ -28,8 +28,10 @@ public class DemoOfficeGrader : MonoBehaviour
     [SerializeField] private List<Furniture> Sofas;
     [SerializeField] private bool[] WorkstationCriteria, LibraryCriteria, CountCriteria; // these track the requirements listed in the comments
     [SerializeField] private GameObject GradingPanel;
-    [SerializeField] private TMP_Text TextBox;
+    [SerializeField] private GameObject CheckboxLayout;
+    [SerializeField] private TMP_Text ScoreTextBox;
     [SerializeField] private Timer GameTimer;
+    [SerializeField] private GameObject CriterionPrefab;
 
     public void GradeDemoOfficeRoom()
     {
@@ -55,22 +57,75 @@ public class DemoOfficeGrader : MonoBehaviour
         }
         int timeBonus = CalculateTimeBonus();
         int finalScore = WorkstationCheck() + LibraryCheck() + CountCheck() + timeBonus;
-        string gradingRubric = 
-            $"Grading: \n\n" +
-            $"(1 pt) Professional color chosen for desk: {WorkstationCriteria[0]} \n" +
-            $"(1 pt) Desk and library separated: {WorkstationCriteria[1]} \n" +
-            $"(1 pt) Desk has a chair nearby: {WorkstationCriteria[2]} \n" +
-            $"(1 pt) Professional color chosen for chair: {WorkstationCriteria[3]} \n" +
-            $"(1 pt) Desk and chair colors match: {WorkstationCriteria[4]} \n\n" +
-            $"(1 pt) Exciting bookshelf color chosen: {LibraryCriteria[0]} \n" +
-            $"(1 pt) One vibrant comfortable seat in room: {LibraryCriteria[1]} \n" +
-            $"(1 pt) Multiple vibrant comfortable seat in room: {LibraryCriteria[2]} \n\n" +
-            $"(1 pt) Between 4 to 7 pieces of furniture: {CountCriteria[0]} \n" +
-            $"(1 pt) At least 1 table, chair, and bookshelf: {CountCriteria[1]} \n\n" +
-            $"(5 pt) Time Bonus: {timeBonus} \n\n" +
-            $"Total Score: {finalScore}/15";
-        TextBox.text = gradingRubric;
+        // old textbox code
+        //string gradingRubric = 
+        //    $"Grading: \n\n" +
+        //    $"(1 pt) Professional color chosen for desk: {WorkstationCriteria[0]} \n" +
+        //    $"(1 pt) Desk and library separated: {WorkstationCriteria[1]} \n" +
+        //    $"(1 pt) Desk has a chair nearby: {WorkstationCriteria[2]} \n" +
+        //    $"(1 pt) Professional color chosen for chair: {WorkstationCriteria[3]} \n" +
+        //    $"(1 pt) Desk and chair colors match: {WorkstationCriteria[4]} \n\n" +
+        //    $"(1 pt) Exciting bookshelf color chosen: {LibraryCriteria[0]} \n" +
+        //    $"(1 pt) One vibrant comfortable seat in room: {LibraryCriteria[1]} \n" +
+        //    $"(1 pt) Multiple vibrant comfortable seat in room: {LibraryCriteria[2]} \n\n" +
+        //    $"(1 pt) Between 4 to 7 pieces of furniture: {CountCriteria[0]} \n" +
+        //    $"(1 pt) At least 1 table, chair, and bookshelf: {CountCriteria[1]} \n\n" +
+        //    $"(5 pt) Time Bonus: {timeBonus} \n\n" +
+        //    $"Total Score: {finalScore}/15";
+        //TextBox.text = gradingRubric;
+
+        // new checkboxes code
+        string[] workstationDescriptions =
+        {
+            "Professional color chosen for desk (1 pt)",
+            "Desk and library separated (1 pt)",
+            "Desk has a chair nearby (1 pt)",
+            "Professional color chosen for chair (1 pt)",
+            "Desk and chair colors match (1 pt)",
+        };
+        string[] libraryDescriptions = 
+        {
+            "Exciting bookshelf color chosen (1 pt)",
+            "One vibrant comfortable seat in room (1 pt)",
+            "Multiple vibrant comfortable seat in room (1 pt)",
+        };
+        string[] countCriteria =
+        {
+            "Between 4 to 7 pieces of furniture (1 pt)",
+            "At least 1 table, chair, and bookshelf (1 pt)",
+        };
+
+        for (int item = 0; item < WorkstationCriteria.Length + LibraryCriteria.Length + CountCriteria.Length; item++)
+        {
+            if (item < WorkstationCriteria.Length)
+            {
+                CreateToggle(workstationDescriptions[item], WorkstationCriteria[item]);
+            }
+            else if (item < WorkstationCriteria.Length + LibraryCriteria.Length)
+            {
+                int index = item - WorkstationCriteria.Length;
+                CreateToggle(libraryDescriptions[index], LibraryCriteria[index]);
+            }
+            else
+            {
+                int index = item - WorkstationCriteria.Length - LibraryCriteria.Length;
+                CreateToggle(countCriteria[index], CountCriteria[index]);
+            }
+        }
+
+        string scoreMessage = $"Time Bonus (5 pts): {timeBonus}\nTotal Score: {finalScore}/15";
+        ScoreTextBox.text = scoreMessage;
+
         GradingPanel.gameObject.SetActive(true);
+    }
+
+    private void CreateToggle(string message, bool value)
+    {
+        // creating the toggle as a child of the layout window
+        GameObject toggleObject = Instantiate(CriterionPrefab, CheckboxLayout.transform);
+        // initializing the text
+        Criterion criterion = toggleObject.GetComponent<Criterion>();
+        criterion.SetState(message, value);
     }
 
     private int WorkstationCheck()
@@ -219,17 +274,30 @@ public class DemoOfficeGrader : MonoBehaviour
     public void ClosePanel()
     {
         GradingPanel.SetActive(false);
+
+        // clear out previous criteria from layout
+        Criterion[] criteria = CheckboxLayout.GetComponentsInChildren<Criterion>();
+        foreach (Criterion criterion in criteria)
+        {
+            Destroy(criterion.gameObject);
+        }
+
+        // clear out lists of furniture
+        Desks = new List<Furniture>();
+        Chairs = new List<Furniture>();
+        Bookshelves = new List<Furniture>();
+        Sofas = new List<Furniture>();
     }
 
-    public void DisplayInstructions()
-    {
-        GradingPanel.SetActive(true);
-        TextBox.text = "(this is temporary - in reality, you'd talk to the client)\n\n" +
-            "Your client wants to create a nice office room that he can both work and relax in.\n\n " +
-            "He wants the room to have two major sections: a work station where he can work without distraction, " +
-            "and a personal library for taking breaks, relaxing, and spending time with his wife and son after work.\n\n" +
-            "He wants the work station to look professional for his video conferences and wants the library to stand out and use exciting colors.";
-    }
+    //public void DisplayInstructions()
+    //{
+    //    GradingPanel.SetActive(true);
+    //    TextBox.text = "(this is temporary - in reality, you'd talk to the client)\n\n" +
+    //        "Your client wants to create a nice office room that he can both work and relax in.\n\n " +
+    //        "He wants the room to have two major sections: a work station where he can work without distraction, " +
+    //        "and a personal library for taking breaks, relaxing, and spending time with his wife and son after work.\n\n" +
+    //        "He wants the work station to look professional for his video conferences and wants the library to stand out and use exciting colors.";
+    //}
 
     private int CalculateTimeBonus()
     {
