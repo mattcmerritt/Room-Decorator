@@ -163,12 +163,14 @@ MonoBehaviour:
   - Bookshelf
   - Loveseat
   - Sofa
+  - Desk
   FurniturePrefabs:
   - {fileID: 6791353238857084115, guid: a307b2ff1678d9543856213a1849c4bf, type: 3}
   - {fileID: 4823888087605950595, guid: 631595dc5a8de2d4e937f3be1e31a328, type: 3}
   - {fileID: 7502495848981478578, guid: 7ad388426df212b4e8cb73047303fdf2, type: 3}
   - {fileID: 5853209245257979613, guid: d28ab771b7206214d8ababd9e8ade2b7, type: 3}
   - {fileID: 5230121446945438108, guid: 7e08d975e201e744f9c045d2dc208c6a, type: 3}
+  - {fileID: 6896983624191022583, guid: 46a0d9891612c62438744cd8af5f0720, type: 3}
   FlatColorMat: {fileID: 2100000, guid: 594a5ffe68c863841a34490164f1c99e, type: 2}
 --- !u!4 &108904722
 Transform:
@@ -1013,6 +1015,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 108904721}
+    - target: {fileID: 8687904146417337719, guid: ac8a908f2246a9248b54380f1f681eeb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1479669251}
+    - target: {fileID: 8687904146417337719, guid: ac8a908f2246a9248b54380f1f681eeb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 108904721}
+    - target: {fileID: 8687904146417337719, guid: ac8a908f2246a9248b54380f1f681eeb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowPainting
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687904146417337719, guid: ac8a908f2246a9248b54380f1f681eeb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687904146417337719, guid: ac8a908f2246a9248b54380f1f681eeb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Desk
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac8a908f2246a9248b54380f1f681eeb, type: 3}
 --- !u!1 &1821030382991738110 stripped
@@ -1310,7 +1332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4324651495975724662, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 11.000024
+      value: 11.0013895
       objectReference: {fileID: 0}
     - target: {fileID: 4499691891993923727, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchorMin.y
