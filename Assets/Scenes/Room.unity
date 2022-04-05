@@ -163,12 +163,14 @@ MonoBehaviour:
   - Bookshelf
   - Loveseat
   - Sofa
+  - Desk
   FurniturePrefabs:
   - {fileID: 6791353238857084115, guid: a307b2ff1678d9543856213a1849c4bf, type: 3}
   - {fileID: 4823888087605950595, guid: 631595dc5a8de2d4e937f3be1e31a328, type: 3}
   - {fileID: 7502495848981478578, guid: 7ad388426df212b4e8cb73047303fdf2, type: 3}
   - {fileID: 5853209245257979613, guid: d28ab771b7206214d8ababd9e8ade2b7, type: 3}
   - {fileID: 5230121446945438108, guid: 7e08d975e201e744f9c045d2dc208c6a, type: 3}
+  - {fileID: 6896983624191022583, guid: 46a0d9891612c62438744cd8af5f0720, type: 3}
   FlatColorMat: {fileID: 2100000, guid: 594a5ffe68c863841a34490164f1c99e, type: 2}
   HintManager: {fileID: 6622152066664451368}
 --- !u!4 &108904722
@@ -1025,6 +1027,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 108904721}
+    - target: {fileID: 8687904146417337719, guid: ac8a908f2246a9248b54380f1f681eeb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1479669251}
+    - target: {fileID: 8687904146417337719, guid: ac8a908f2246a9248b54380f1f681eeb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 108904721}
+    - target: {fileID: 8687904146417337719, guid: ac8a908f2246a9248b54380f1f681eeb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowPainting
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687904146417337719, guid: ac8a908f2246a9248b54380f1f681eeb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687904146417337719, guid: ac8a908f2246a9248b54380f1f681eeb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Desk
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac8a908f2246a9248b54380f1f681eeb, type: 3}
 --- !u!1 &1821030382991738110 stripped
@@ -1077,11 +1099,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1370011687, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000019073486
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 1370011687, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00015599604
+      value: -0.000002861023
       objectReference: {fileID: 0}
     - target: {fileID: 1370011689, guid: 1077629671687554a88e55628002f4ee, type: 3}
       propertyPath: ButtonPrefab
@@ -1703,58 +1725,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1479669251}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.125
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864699693492943326, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733697276646806609, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892527981173749459, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892527981173749459, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892527981173749459, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6892527981173749459, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6892527981407216464, guid: b572b226565c3154c9734f0d871e5249, type: 3}
       propertyPath: m_Name
       value: Grading UI
@@ -2088,6 +2058,10 @@ PrefabInstance:
     - target: {fileID: 4284263365340724778, guid: 071ca654cd60cf74184c2a70fc0e03ad, type: 3}
       propertyPath: m_Name
       value: Gameplay UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284263365340724778, guid: 071ca654cd60cf74184c2a70fc0e03ad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 071ca654cd60cf74184c2a70fc0e03ad, type: 3}
