@@ -17,6 +17,7 @@ public class ChatBubble : MonoBehaviour
     private void Update()
     {
         CheckSize();
+        transform.localScale = Vector3.one;
     }
 
     public void SetMessage(string msg)
