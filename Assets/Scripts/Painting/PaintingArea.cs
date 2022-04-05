@@ -15,6 +15,9 @@ public class PaintingArea : MonoBehaviour
     [SerializeField] 
     private Material FlatColorMat;
 
+    [SerializeField]
+    private PlacementHints HintManager;
+
     public void LoadObject(string name)
     {
         int index = Names.IndexOf(name);
@@ -100,5 +103,8 @@ public class PaintingArea : MonoBehaviour
 
         // activate placement click detection
         ActiveObject.GetComponent<Furniture>().ToggleBeingPainted();
+
+        // send new hint if applicable
+        HintManager.LookForPlacementHint(ActiveObject.GetComponent<Furniture>());
     }
 }

@@ -207,7 +207,7 @@ public class DemoOfficeGrader : MonoBehaviour
         }
 
         // check if there is a desk, chair, and bookshelf
-        if (Desks.Count > 0 && Chairs.Count > 0 && Bookshelves.Count > 0)
+        if (Desks.Count > 0 && (Chairs.Count > 0 || Sofas.Count > 0) && Bookshelves.Count > 0)
         {
             score += 1;
             CountCriteria[1] = true;
