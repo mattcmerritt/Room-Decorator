@@ -110,4 +110,10 @@ public class PaintingArea : MonoBehaviour
         // send new hint if applicable
         HintManager.LookForPlacementHint(ActiveObject.GetComponent<Furniture>());
     }
+
+    //removes Item picked from catalog
+    public void RemoveItemFromRoom()
+    {
+        Destroy(ActiveObject);
+    }
 }
