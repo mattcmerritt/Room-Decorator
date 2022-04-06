@@ -55,8 +55,9 @@ public class DemoOfficeGrader : MonoBehaviour
                 Sofas.Add(furni);
             }
         }
-        int timeBonus = CalculateTimeBonus();
-        int finalScore = WorkstationCheck() + LibraryCheck() + CountCheck() + timeBonus;
+        float timeBonus = CalculateTimeBonus();
+        int rawScore = WorkstationCheck() + LibraryCheck() + CountCheck();
+        float finalScore = rawScore * timeBonus;
         // old textbox code
         //string gradingRubric = 
         //    $"Grading: \n\n" +
@@ -113,7 +114,7 @@ public class DemoOfficeGrader : MonoBehaviour
             }
         }
 
-        string scoreMessage = $"Time Bonus (5 pts): {timeBonus}\nTotal Score: {finalScore}/15";
+        string scoreMessage = $"Unweighted Score: {rawScore}/10\nWeighted Score (Time Bonus): {rawScore} * {timeBonus} = {finalScore}";
         ScoreTextBox.text = scoreMessage;
 
         GradingPanel.gameObject.SetActive(true);
@@ -299,28 +300,16 @@ public class DemoOfficeGrader : MonoBehaviour
     //        "He wants the work station to look professional for his video conferences and wants the library to stand out and use exciting colors.";
     //}
 
-    private int CalculateTimeBonus()
+    private float CalculateTimeBonus()
     {
-        if (Mathf.Floor(GameTimer.GetTimerValue()) < 60)
-        {
-            return 5;
-        }
-        if (Mathf.Floor(GameTimer.GetTimerValue()) < 90)
-        {
-            return 4;
-        }
         if (Mathf.Floor(GameTimer.GetTimerValue()) < 120)
-        {
-            return 3;
-        }
-        if (Mathf.Floor(GameTimer.GetTimerValue()) < 150)
         {
             return 2;
         }
-        if (Mathf.Floor(GameTimer.GetTimerValue()) < 180)
+        if (Mathf.Floor(GameTimer.GetTimerValue()) < 240)
         {
-            return 1;
+            return 1.5f;
         }
-        return 0;
+        return 1;
     }
 }
