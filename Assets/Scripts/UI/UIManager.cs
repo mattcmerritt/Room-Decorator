@@ -5,7 +5,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject Catalog, Gameplay, Painting, Grading, ClientChat, WallColor;
+    private GameObject Catalog, Gameplay, Painting, Grading, ClientChat, WallColor, FloorColor;
 
     [SerializeField]
     private GameObject PaintingArea, MainCamera;
@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
         Grading.SetActive(false);
         ClientChat.SetActive(false);
         WallColor.SetActive(false);
+        FloorColor.SetActive(false);
 
         SwitchToRoom();
     }
@@ -33,6 +34,7 @@ public class UIManager : MonoBehaviour
         Grading.SetActive(true);
         ClientChat.SetActive(false);
         WallColor.SetActive(false);
+        FloorColor.SetActive(false);
 
         SwitchToRoom();
     }
@@ -45,6 +47,7 @@ public class UIManager : MonoBehaviour
         Grading.SetActive(false);
         ClientChat.SetActive(false);
         WallColor.SetActive(false);
+        FloorColor.SetActive(false);
 
         SwitchToPaintingArea();
     }
@@ -57,6 +60,7 @@ public class UIManager : MonoBehaviour
         Grading.SetActive(false);
         ClientChat.SetActive(true);
         WallColor.SetActive(false);
+        FloorColor.SetActive(false);
 
         SwitchToRoom();
     }
@@ -69,6 +73,19 @@ public class UIManager : MonoBehaviour
         Grading.SetActive(false);
         ClientChat.SetActive(false);
         WallColor.SetActive(true);
+        FloorColor.SetActive(false);
+
+        SwitchToRoom();
+    }
+    public void ShowFloorColor()
+    {
+        Catalog.SetActive(false);
+        Gameplay.SetActive(false);
+        Painting.SetActive(false);
+        Grading.SetActive(false);
+        ClientChat.SetActive(false);
+        WallColor.SetActive(false);
+        FloorColor.SetActive(true);
 
         SwitchToRoom();
     }
