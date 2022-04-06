@@ -1950,10 +1950,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grading UI
       objectReference: {fileID: 0}
-    - target: {fileID: 6892527981407216464, guid: b572b226565c3154c9734f0d871e5249, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6892527981407216492, guid: b572b226565c3154c9734f0d871e5249, type: 3}
       propertyPath: m_Pivot.x
       value: 0
