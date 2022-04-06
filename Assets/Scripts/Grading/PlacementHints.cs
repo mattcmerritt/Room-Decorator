@@ -31,6 +31,7 @@ public class PlacementHints : MonoBehaviour
     private float HintTimer;
     [SerializeField] private TMP_Text NewMessageBox;
     [SerializeField] private MessageAligner Phone;
+    [SerializeField] private Animator NotificationWindow;
 
     private void Start()
     {
@@ -146,5 +147,6 @@ public class PlacementHints : MonoBehaviour
     {
         FindObjectOfType<PlacementHints>().NewMessageBox.text = "New message:\n" + hintMessage;
         Phone.AddMessage(hintMessage, false);
+        NotificationWindow.Play("Notify");
     }
 }
