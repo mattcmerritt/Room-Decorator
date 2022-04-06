@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MessageAligner : MonoBehaviour
 {
-    private List<ChatBubble> Messages;
+    private List<ChatBubble> Messages = new List<ChatBubble>();
     [SerializeField]
     private List<string> PreloadedMessages;
     [SerializeField]
@@ -18,8 +18,6 @@ public class MessageAligner : MonoBehaviour
 
     private void Awake()
     {
-        Messages = new List<ChatBubble>();
-
         // preloading messages
         for (int i = 0; i < PreloadedMessages.Count; i++)
         {
