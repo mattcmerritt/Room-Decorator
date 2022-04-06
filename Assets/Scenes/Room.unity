@@ -244,14 +244,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1711813854427960963, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1711813854427960963, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7718778357557926605, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
       propertyPath: m_Name
       value: Room
