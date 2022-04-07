@@ -5,18 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject HowToPlayScreen;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private List<GameObject> Elements;
 
-    // Update is called once per frame
-    void Update()
+    public void ActivateGameElements()
     {
-        
+        foreach (GameObject element in Elements)
+        {
+            element.SetActive(true);
+        }
+
+        Destroy(gameObject);
     }
 
     public void LoadRoomScene()
