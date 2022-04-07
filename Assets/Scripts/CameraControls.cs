@@ -40,10 +40,10 @@ public class CameraControls : MonoBehaviour
         bool hitWindow = false;
 
         RaycastHit hit1;
-        if (Physics.Raycast(Vector3.zero - (MainCam.transform.forward * HideDistance), - (MainCam.transform.forward + MainCam.transform.right), out hit1))
+        if (Physics.Raycast(Vector3.zero - (MainCam.transform.forward * HideDistance), - (MainCam.transform.forward + MainCam.transform.right), out hit1, 100, 1 << 8))
         {
             //Debug.DrawLine(new Vector3(0f, -1f, 0f) - (MainCam.transform.forward * HideDistance), hit1.point, Color.green, 5f);
-            //Debug.Log("Simple Raycast: " + hit1.collider.gameObject.name);
+            //Debug.Log("Raycast: " + hit1.collider.gameObject.name);
             if(hit1.collider.gameObject.name.Contains("Door"))
             {
                 hitDoor = true;
@@ -54,10 +54,10 @@ public class CameraControls : MonoBehaviour
             }
         }
         RaycastHit hit2;
-        if (Physics.Raycast(Vector3.zero - (MainCam.transform.forward * HideDistance), -(MainCam.transform.forward - MainCam.transform.right), out hit2))
+        if (Physics.Raycast(Vector3.zero - (MainCam.transform.forward * HideDistance), -(MainCam.transform.forward - MainCam.transform.right), out hit2, 100, 1 << 8))
         {
             //Debug.DrawLine(new Vector3(0f, -1f, 0f) - (MainCam.transform.forward * HideDistance), hit2.point, Color.green, 5f);
-            //Debug.Log("Simple Raycast: " + hit2.collider.gameObject.name);
+            //Debug.Log("Raycast: " + hit2.collider.gameObject.name);
             if (hit2.collider.gameObject.name.Contains("Door"))
             {
                 hitDoor = true;
