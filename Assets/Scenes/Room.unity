@@ -244,6 +244,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 191792263722757127, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
+      propertyPath: m_Name
+      value: Wall (Window)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477554613289094701, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
+      propertyPath: m_Name
+      value: Wall (Door)
+      objectReference: {fileID: 0}
     - target: {fileID: 7718778357557926605, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
       propertyPath: m_Name
       value: Room
@@ -324,6 +332,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &669464513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132148490499926, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
+  m_PrefabInstance: {fileID: 264239178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &679317796 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6477554613289094701, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
@@ -578,6 +591,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 191792263722757127, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
   m_PrefabInstance: {fileID: 264239178}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1528119573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132147568867598, guid: d0301b82c0fc0ab46af0ae9358bd145d, type: 3}
+  m_PrefabInstance: {fileID: 264239178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1601188863 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6826086799725885524, guid: 1077629671687554a88e55628002f4ee, type: 3}
@@ -705,7 +723,10 @@ MonoBehaviour:
   MainCam: {fileID: 963194225}
   ZoomSpeed: 0.4
   RotateSpeed: 68.8
+  HideDistance: 15.8
   MainCamera: {fileID: 963194225}
+  Window: {fileID: 1528119573}
+  Door: {fileID: 669464513}
 --- !u!1 &2055437492
 GameObject:
   m_ObjectHideFlags: 0

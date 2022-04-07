@@ -7,10 +7,9 @@ public class CameraControls : MonoBehaviour
     public GameObject MainCam;
     [SerializeField, Range(0, 1)] private float ZoomSpeed;
     [SerializeField, Range(0, 100)] private float RotateSpeed;
+    [SerializeField, Range(0, 20)] private float HideDistance;
     [SerializeField] private GameObject MainCamera;
-
-
-
+    [SerializeField] private GameObject Window, Door;
 
     void Update()
     {
@@ -32,5 +31,44 @@ public class CameraControls : MonoBehaviour
         {
             MainCamera.transform.position += MainCamera.transform.forward * ZoomSpeed;
         }
+        HideWallObstructions();
+    }
+
+    private void HideWallObstructions()
+    {
+        bool hitDoor = false;
+        bool hitWindow = false;
+
+        RaycastHit hit1;
+        if (Physics.Raycast(Vector3.zero - (MainCam.transform.forward * HideDistance), - (MainCam.transform.forward + MainCam.transform.right), out hit1))
+        {
+            //Debug.DrawLine(new Vector3(0f, -1f, 0f) - (MainCam.transform.forward * HideDistance), hit1.point, Color.green, 5f);
+            //Debug.Log("Simple Raycast: " + hit1.collider.gameObject.name);
+            if(hit1.collider.gameObject.name.Contains("Door"))
+            {
+                hitDoor = true;
+            }
+            if (hit1.collider.gameObject.name.Contains("Window"))
+            {
+                hitWindow = true;
+            }
+        }
+        RaycastHit hit2;
+        if (Physics.Raycast(Vector3.zero - (MainCam.transform.forward * HideDistance), -(MainCam.transform.forward - MainCam.transform.right), out hit2))
+        {
+            //Debug.DrawLine(new Vector3(0f, -1f, 0f) - (MainCam.transform.forward * HideDistance), hit2.point, Color.green, 5f);
+            //Debug.Log("Simple Raycast: " + hit2.collider.gameObject.name);
+            if (hit2.collider.gameObject.name.Contains("Door"))
+            {
+                hitDoor = true;
+            }
+            if (hit2.collider.gameObject.name.Contains("Window"))
+            {
+                hitWindow = true;
+            }
+        }
+
+        Door.GetComponent<MeshRenderer>().enabled = !hitDoor;
+        Window.GetComponent<MeshRenderer>().enabled = !hitWindow;
     }
 }
