@@ -64,6 +64,8 @@ public class DraggableItem : MonoBehaviour
             IsSelected = false;
 
             MouseOffset = Vector3.zero;
+
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
 
